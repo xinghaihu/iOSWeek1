@@ -14,3 +14,16 @@ Similar to the `updateValues` method, you must define the `onSettingsButton` met
 
 ## Creating a Settings View Controller
 
+In the same way that you created the TipViewController, create the SettingsViewController by clicking File->New->File and selecting Objective-C class. Make sure the subclass is UIViewController and the "With XIB for user interface" is checked.
+
+In the `onSettingsButton` method, launch the settings view controller using the code below. Be sure to add the import to the top of the file.
+
+```
+#import "SettingsViewController.h"
+```
+
+```
+- (void)onSettingsButton {
+    [self.navigationController pushViewController:[[SettingsViewController alloc] init] animated:YES];
+}
+```
