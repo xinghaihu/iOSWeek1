@@ -27,3 +27,11 @@ In the `onSettingsButton` method, launch the settings view controller using the 
     [self.navigationController pushViewController:[[SettingsViewController alloc] init] animated:YES];
 }
 ```
+
+In iOS, navigation stacks are one of the most common navigation mechanisms. You've seen it in many apps when you tap a button a new view slides in from the right. When you tap the back button, the previous view slides in from the left. A UINavigationController maintains the stack of view controllers and you can push new view controllers onto the stack. The back button is automatically added and tapping on the back button will pop the most recent view controller.
+
+## Designing the Settings Page
+
+## Loading and Saving
+
+## View Controller Lifecycle
