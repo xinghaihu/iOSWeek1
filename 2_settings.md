@@ -32,6 +32,29 @@ In iOS, navigation stacks are one of the most common navigation mechanisms. You'
 
 ## Designing the Settings Page
 
+The purpose of the settings page is to configure the default tip percentage. In SettingsViewController.xib, design what you think the SettingsViewController should look like. It should at least contain a UILabel explaining the purpose of the page.
+
 ## Loading and Saving
+
+There are several different persistence mechanisms in iOS. The simplest to use is a persistent key-value store called NSUserDefaults. You might use NSUserDefaults for similar purposes as cookies in web development. They can store things like application settings, the current user, or a flag for whether a user has already seen a helpful hints popover.
+
+To save a key to NSUserDefaults, do something like this:
+
+```
+NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+[defaults setObject:@"some_string_to_save" forKey:@"some_key_that_you_choose"];
+[defaults setInteger:123 forKey:@"another_key_that_you_choose"];
+[defaults synchronize];
+```
+
+To load a key from NSUserDefaults, do something like this:
+
+```
+NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+NSString *stringValue = [defaults objectForKey:@"some_key_that_you_choose"];
+int intValue = [defaults integerForKey:@"another_key_that_you_choose"];
+```
+
+Note the `synchronize` call. NSUserDefaults automatically and periodically synchronizes, but to manually flush the keys and values to disk, call `synchronize` to guarantee that your updates are saved.
 
 ## View Controller Lifecycle
