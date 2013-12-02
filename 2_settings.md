@@ -58,3 +58,27 @@ int intValue = [defaults integerForKey:@"another_key_that_you_choose"];
 Note the `synchronize` call. NSUserDefaults automatically and periodically synchronizes, but to manually flush the keys and values to disk, call `synchronize` to guarantee that your updates are saved.
 
 ## View Controller Lifecycle
+
+When returning to the main tip view controller from the settings page, it would be good to have the tip percentage reflect the new default value. One way to do that is load the tip percentage from NSUserDefaults whenever the view appears.
+
+A view controller has a series of "lifecycle" methods that are called at various stages. When the view controller is initially set up, `viewDidLoad` is called. As it is shown and hidden, `viewWillAppear`, `viewDidAppear`, `viewWillDisappear`, and `viewDidDisappear` will be called. The appearance and disappearance are split into two methods because sometimes you want some behavior to happen before the transition animation starts or after the transition animation ends.
+
+In `TipViewController.m`, try adding the following methods and watch the console output as you navigate into the settings view and back.
+
+```
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"view will appear");
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"view did appear");
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    NSLog(@"view will disappear");
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    NSLog(@"view will disappear");
+}
+```
