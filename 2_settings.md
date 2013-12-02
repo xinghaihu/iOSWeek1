@@ -1,1 +1,1 @@
-Settings
+# Adding Tip Calculator Settings Page
