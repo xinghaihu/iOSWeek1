@@ -79,6 +79,6 @@ In `TipViewController.m`, try adding the following methods and watch the console
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-    NSLog(@"view will disappear");
+    NSLog(@"view did disappear");
 }
 ```
