@@ -71,7 +71,11 @@
     int intValue = [defaults integerForKey:@"default_tip_percentage"];
     // NSLog(@"%ld", (long)intValue);
     [self.tipControl setSelectedSegmentIndex:intValue];
-    //[self viewDidLoad];
+    if ([defaults integerForKey:@"light_on"]) {
+        self.view.backgroundColor = [UIColor whiteColor];
+    } else {
+        self.view.backgroundColor = [UIColor greenColor];
+    }
 }
 
 @end
