@@ -5,4 +5,5 @@ Q: Which required and optional stories have you completed?
 A: Qequired stories include all of them: Creating a Settings View Controller, Designing the Settings Page, Loading and Saving, View Controller Lifecycle. Optional ones include: Adding a light/dark color theme to the settings view.
 
 GIF walkthrough of all required and optional stories:
+
 ![alt tag](https://github.com/xinghaihu/iOSWeek1/blob/master/demo.gif)
