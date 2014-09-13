@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A03FB015-6E3D-411D-8F19-D8C2504504D2</string>
+	<string>B6A5E5EE-9D16-4C3E-886F-1AFEA6FE34EC</string>
 	<key>IDESourceControlProjectName</key>
 	<string>tipcalculator</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>7DC847D7-FF53-402E-A434-6244E527F9B0</string>
 			<key>IDESourceControlWCCName</key>
-			<string>hw</string>
+			<string>tipcalculator</string>
 		</dict>
 	</array>
 </dict>
